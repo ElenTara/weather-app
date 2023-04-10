@@ -4,18 +4,124 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather application</title>
+    <script
+      src="https://kit.fontawesome.com/7c6671ea81.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
-      <h1>Weather App</h1>
+      <div class="weather">
+        <div class="border border-2 p-3 m-3 rounded-3 shadow">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city"
+                  placeholder="🔍  Enter the city..."
+                />
+              </div>
+              <div class="col-3">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style="--bs-btn-font-weight: 600"
+                >
+                  Search
+                </button>
+                <button
+                  class="btn btn-secondary"
+                  style="--bs-btn-font-weight: 600"
+                  id="position"
+                >
+                  Current
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="today border-bottom">
+            <div class="row today-left">
+              <div class="col-8">
+                <h1>Odessa</h1>
+                <h6>
+                  <span class="temp">Day 13 / Night 9</span>
+                  <span class="units">
+                    <a href="#" id="celcius"> °C</a> |
+                    <a href="#" id="fahrenheit">°F</a>
+                  </span>
+                </h6>
+                <p class="date">Sunday | March 19 | 20:09</p>
+              </div>
+              <div class="col-4 bg-body-secondary now">
+                <div class="row">
+                  <div class="col" id="curr-temp">+7</div>
+                  <div class="col icon">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col humid">
+                    Humidity <span id="curr-hum">64</span>%
+                  </div>
+                  <div class="col wind">
+                    Wind <span id="curr-wind">18</span>&nbsp;km/h
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="forecast">
+            <div class="row days">
+              <div class="col">Tue</div>
+              <div class="col">Wed</div>
+              <div class="col">Thu</div>
+              <div class="col">Fri</div>
+              <div class="col">Sat</div>
+            </div>
+            <div class="row weather-icon">
+              <div class="col">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-cloud-sun"></i>
+              </div>
+              <div class="col"><i class="fa-solid fa-cloud-sun"></i></div>
+              <div class="col">
+                <i class="fa-solid fa-cloud"></i>
+              </div>
+            </div>
+            <div class="row temperature">
+              <div class="col"><span>8°</span>/3°</div>
+              <div class="col"><span>10°</span>/5°</div>
+              <div class="col"><span>11°</span>/4°</div>
+              <div class="col"><span>13°</span>/6°</div>
+              <div class="col"><span>14°</span>/6°</div>
+            </div>
+            <div class="row humidity">
+              <div class="col">15%</div>
+              <div class="col">14%</div>
+              <div class="col">15%</div>
+              <div class="col">12%</div>
+              <div class="col">10%</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
