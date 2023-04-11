@@ -23,27 +23,29 @@ form {
 .today {
   padding: 0 10px 10px;
 }
+.temp {
+  font-size: 1.2em;
+}
 .units {
   font-size: 20px;
   position: relative;
   left: 15px;
+}
+#celcius,
+#fahrenheit {
   text-decoration: none;
 }
 .now {
   background-color: #e9ebeec2;
   border: none;
   border-radius: 10px;
+  text-align: center;
 }
 .today-top {
+  font-family: "Montserrat", sans-serif;
   font-size: 45px;
   font-weight: 900;
-  text-align: center;
 }
-
-.today-btm {
-  text-align: center;
-}
-
 .row.forecast {
   margin: 0;
   padding-right: 0;
@@ -52,7 +54,7 @@ form {
   background-color: #e9ebee85;
   border: none;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px rgb(156, 155, 155, 0.5);
+  box-shadow: 5px 5px 5px rgb(156, 155, 155, 0.8);
   margin: 10px 5px;
   max-width: 130px;
   padding: 5px 5px;
@@ -62,18 +64,19 @@ form {
   margin-bottom: 10px;
 }
 .weather-icon {
-  color: #0b5ed7;
+  color: #3470ca;
   font-size: 30px;
   margin-bottom: 8px;
 }
 .next-temp {
   color: #ff1e78;
-  font-size: 17px;
+  font-size: 18px;
   margin-bottom: 0px;
 }
 .next-humid {
-  margin-bottom: 5px;
   color: #196ce7;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 5px;
 }
 .temp-day {
   font-weight: bold;
