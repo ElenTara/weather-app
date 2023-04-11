@@ -54,7 +54,7 @@ form {
   background-color: #e9ebee85;
   border: none;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px rgb(156, 155, 155, 0.8);
+  box-shadow: 5px 5px 5px rgb(156, 155, 155, 0.7);
   margin: 10px 5px;
   max-width: 130px;
   padding: 5px 5px;
@@ -80,4 +80,8 @@ form {
 }
 .temp-day {
   font-weight: bold;
+}
+.footer {
+  font-size: small;
+  text-align: center;
 }
