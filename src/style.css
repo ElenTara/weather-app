@@ -4,19 +4,16 @@ h1 {
 form {
   margin-bottom: 10px;
 }
-/*.container {
-  max-width: 800px;
-  margin: 0 auto;
-}*/
 
 .weather {
   color: #59607a;
   margin: 50px auto;
   max-width: 60%;
 }
-/*.border {
-  background-image: ;
-}*/
+.border {
+  background-image: url("https://images.pexels.com/photos/19670/pexels-photo.jpg");
+  background-size: cover;
+}
 .buttons {
   padding-left: 0px;
 }
@@ -26,11 +23,23 @@ form {
 .today {
   padding: 0 10px 10px;
 }
+.units {
+  font-size: 20px;
+  position: relative;
+  left: 15px;
+  text-decoration: none;
+}
+.now {
+  background-color: #e9ebeec2;
+  border: none;
+  border-radius: 10px;
+}
 .today-top {
   font-size: 45px;
   font-weight: 900;
   text-align: center;
 }
+
 .today-btm {
   text-align: center;
 }
@@ -40,7 +49,7 @@ form {
   padding-right: 0;
 }
 .col.days {
-  background-color: #e9ebee;
+  background-color: #e9ebee85;
   border: none;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgb(156, 155, 155, 0.5);
