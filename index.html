@@ -23,7 +23,7 @@
         <div class="border border-2 p-3 m-3 rounded-3 shadow">
           <form id="search-form">
             <div class="row">
-              <div class="col-9">
+              <div class="col-9 city-input">
                 <input
                   type="text"
                   class="form-control"
@@ -33,17 +33,17 @@
                   placeholder="🔍  Enter the city..."
                 />
               </div>
-              <div class="col-3">
+              <div class="col-3 buttons">
                 <button
                   type="submit"
                   class="btn btn-primary"
-                  style="--bs-btn-font-weight: 600"
+                  style="--bs-btn-font-weight: 500"
                 >
                   Search
                 </button>
                 <button
                   class="btn btn-secondary"
-                  style="--bs-btn-font-weight: 600"
+                  style="--bs-btn-font-weight: 500"
                   id="position"
                 >
                   Current
@@ -62,16 +62,18 @@
                     <a href="#" id="fahrenheit">°F</a>
                   </span>
                 </h6>
-                <p class="date">Sunday | March 19 | 20:09</p>
+                <p class="date">
+                  Sunday &nbsp;|&nbsp; March 19 &nbsp;|&nbsp; 20:09
+                </p>
               </div>
               <div class="col-4 bg-body-secondary now">
-                <div class="row">
-                  <div class="col" id="curr-temp">+7</div>
-                  <div class="col icon">
+                <div class="row today-top">
+                  <div class="col" id="curr-temp">+13</div>
+                  <div class="col" id="today-icon">
                     <i class="fa-solid fa-cloud-sun"></i>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row today-btm">
                   <div class="col humid">
                     Humidity <span id="curr-hum">64</span>%
                   </div>
@@ -82,42 +84,47 @@
               </div>
             </div>
           </div>
-          <div class="forecast">
-            <div class="row days">
-              <div class="col">Tue</div>
-              <div class="col">Wed</div>
-              <div class="col">Thu</div>
-              <div class="col">Fri</div>
-              <div class="col">Sat</div>
+          <div class="row forecast">
+            <div class="col days">
+              <h5 class="day">Tue</h5>
+              <i class="fa-solid fa-cloud-rain weather-icon"></i>
+              <p class="next-temp"><span class="temp-day">8° </span>| 3°</p>
+              <p class="next-humid">15%</p>
             </div>
-            <div class="row weather-icon">
-              <div class="col">
-                <i class="fa-solid fa-cloud-rain"></i>
-              </div>
-              <div class="col">
-                <i class="fa-solid fa-cloud-rain"></i>
-              </div>
-              <div class="col">
-                <i class="fa-solid fa-cloud-sun"></i>
-              </div>
-              <div class="col"><i class="fa-solid fa-cloud-sun"></i></div>
-              <div class="col">
-                <i class="fa-solid fa-cloud"></i>
-              </div>
+
+            <div class="col days">
+              <h5 class="day">Wed</h5>
+              <i class="fa-solid fa-cloud-rain weather-icon"></i>
+              <p class="next-temp"><span class="temp-day">10° </span>| 5°</p>
+              <p class="next-humid">14%</p>
             </div>
-            <div class="row temperature">
-              <div class="col"><span>8°</span>/3°</div>
-              <div class="col"><span>10°</span>/5°</div>
-              <div class="col"><span>11°</span>/4°</div>
-              <div class="col"><span>13°</span>/6°</div>
-              <div class="col"><span>14°</span>/6°</div>
+
+            <div class="col days">
+              <h5 class="day">Thu</h5>
+              <i class="fa-solid fa-cloud-sun weather-icon"></i>
+              <p class="next-temp"><span class="temp-day">11° </span>| 4°</p>
+              <p class="next-humid">15%</p>
             </div>
-            <div class="row humidity">
-              <div class="col">15%</div>
-              <div class="col">14%</div>
-              <div class="col">15%</div>
-              <div class="col">12%</div>
-              <div class="col">10%</div>
+
+            <div class="col days">
+              <h5 class="day">Fri</h5>
+              <i class="fa-solid fa-cloud weather-icon"></i>
+              <p class="next-temp"><span class="temp-day">13° </span>| 6°</p>
+              <p class="next-humid">12%</p>
+            </div>
+
+            <div class="col days">
+              <h5 class="day">Sat</h5>
+              <i class="fa-solid fa-cloud weather-icon"></i>
+              <p class="next-temp"><span class="temp-day">14° </span>| 6°</p>
+              <p class="next-humid">10%</p>
+            </div>
+
+            <div class="col days">
+              <h5 class="day">Sun</h5>
+              <i class="fa-solid fa-cloud weather-icon"></i>
+              <p class="next-temp"><span class="temp-day">12° </span>| 7°</p>
+              <p class="next-humid">68%</p>
             </div>
           </div>
         </div>
