@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather application</title>
     <script
@@ -29,13 +30,13 @@
         <div class="border border-2 p-3 m-3 rounded-3 shadow">
           <form id="search-form">
             <div class="row">
-              <div class="col-9 city-input">
+              <div class="col-9 city-search">
                 <input
                   type="text"
                   class="form-control"
                   autofocus="on"
                   autocomplete="off"
-                  id="city"
+                  id="city-input"
                   placeholder="🔍  Enter the city..."
                 />
               </div>
@@ -60,7 +61,7 @@
           <div class="today border-bottom">
             <div class="row today-left">
               <div class="col-8">
-                <h1>Odessa</h1>
+                <h1 id="city">Odessa</h1>
                 <h6>
                   <span class="temp">Day 13 / Night 9 </span>
                   <span class="units">
