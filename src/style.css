@@ -88,6 +88,6 @@ p {
   font-size: small;
   text-align: center;
 }
-#description {
+#description:first-letter {
   text-transform: capitalize;
 }
