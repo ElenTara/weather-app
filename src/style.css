@@ -4,6 +4,9 @@ h1 {
 form {
   margin-bottom: 10px;
 }
+p {
+  margin-bottom: 5px;
+}
 
 .weather {
   color: #59607a;
@@ -84,4 +87,7 @@ form {
 .footer {
   font-size: small;
   text-align: center;
+}
+#description {
+  text-transform: capitalize;
 }
