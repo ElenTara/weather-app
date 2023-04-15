@@ -35,12 +35,14 @@ function formatDate(timestamp) {
   let month = months[now.getMonth()];
   let date = now.getDate();
   return `${day} &nbsp;|&nbsp; ${month} ${date} &nbsp;|&nbsp; ${hours}:${minutes}`;
-  // что-то не то с минутами
+  // Somethimg wrong with minutes here!
 }
 
 let apiKey = "b39fd544fbfd289a17b0d205d5515953";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Odessa&appid=${apiKey}&units=metric`;
+let city = "Odessa";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 //console.log(apiUrl);
+
 function displayTemperature(response) {
   //console.log(response.data);
   let currTemp = document.querySelector("#curr-temp");
