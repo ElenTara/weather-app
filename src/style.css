@@ -49,6 +49,10 @@ p {
   font-size: 45px;
   font-weight: 900;
 }
+#icon-now {
+  width: 80px;
+  height: 80px;
+}
 .row.forecast {
   margin: 0;
   padding-right: 0;

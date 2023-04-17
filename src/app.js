@@ -34,8 +34,8 @@ function formatDate(timestamp) {
   ];
   let month = months[now.getMonth()];
   let date = now.getDate();
-  return `${day} &nbsp;|&nbsp; ${month} ${date} &nbsp;|&nbsp; ${hours}:${minutes}`;
-  // Somethimg wrong with minutes here!
+  return `Last updated:&nbsp; ${day} &nbsp;|&nbsp; ${month} ${date} &nbsp;|&nbsp; ${hours}:${minutes}`;
+  // Отображает время последнего обновления погоды на сайте!!
 }
 
 let apiKey = "b39fd544fbfd289a17b0d205d5515953";
@@ -44,7 +44,7 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
 //console.log(apiUrl);
 
 function displayTemperature(response) {
-  //console.log(response.data);
+  console.log(response.data);
   let currTemp = document.querySelector("#curr-temp");
   let temperature = Math.round(response.data.main.temp);
   if (temperature > 0) {
@@ -66,5 +66,13 @@ function displayTemperature(response) {
 
   let dateElement = document.querySelector("#date"); // вставляем дату, вызываем функцию
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
+  let iconToday = document.querySelector("#icon-now");
+  // вместо innerHTML - меняем атрибуты элемента img с иконкой текущей погоды
+  iconToday.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconToday.setAttribute("alt", response.data.weather[0].description);
 }
 axios.get(apiUrl).then(displayTemperature);
