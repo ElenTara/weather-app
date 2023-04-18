@@ -32,7 +32,7 @@
             <div class="row">
               <div class="col-9 city-search">
                 <input
-                  type="text"
+                  type="search"
                   class="form-control"
                   autofocus="on"
                   autocomplete="off"
@@ -41,13 +41,12 @@
                 />
               </div>
               <div class="col-3 buttons">
-                <button
+                <input
                   type="submit"
+                  value="Search"
                   class="btn btn-primary"
                   style="--bs-btn-font-weight: 500"
-                >
-                  Search
-                </button>
+                />
                 <button
                   class="btn btn-secondary"
                   style="--bs-btn-font-weight: 500"
@@ -61,7 +60,7 @@
           <div class="today border-bottom">
             <div class="row today-left">
               <div class="col-8">
-                <h1 id="city">Odessa</h1>
+                <h1 id="city"></h1>
                 <h6>
                   <span class="temp">Day 13 / Night 9 </span>
                   <span class="units">
@@ -69,24 +68,24 @@
                     <a href="#" id="fahrenheit">°F</a>
                   </span>
                 </h6>
-                <p id="description">Clear</p>
+                <p id="description"></p>
                 <p class="date" id="date">
                   Sunday &nbsp;|&nbsp; March 19 &nbsp;|&nbsp; 20:09
                 </p>
               </div>
               <div class="col-4 now">
                 <div class="row today-top">
-                  <div class="col" id="curr-temp"></div>
-                  <div class="col" id="today-icon">
+                  <div class="col-6" id="curr-temp"></div>
+                  <div class="col-6" id="today-icon">
                     <img src="" id="icon-now" alt="" />
                   </div>
                 </div>
                 <div class="row today-btm">
                   <div class="col humid">
-                    Humidity <span id="curr-hum">64</span>%
+                    Humidity <span id="curr-hum"></span>%
                   </div>
                   <div class="col wind">
-                    Wind <span id="curr-wind">18</span>&nbsp;km/h
+                    Wind <span id="curr-wind"></span>&nbsp;km/h
                   </div>
                 </div>
               </div>

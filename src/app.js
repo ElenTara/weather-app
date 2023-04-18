@@ -38,13 +38,8 @@ function formatDate(timestamp) {
   // Отображает время последнего обновления погоды на сайте!!
 }
 
-let apiKey = "b39fd544fbfd289a17b0d205d5515953";
-let city = "Odessa";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-//console.log(apiUrl);
-
 function displayTemperature(response) {
-  console.log(response.data);
+  //console.log(response.data);
   let currTemp = document.querySelector("#curr-temp");
   let temperature = Math.round(response.data.main.temp);
   if (temperature > 0) {
@@ -75,4 +70,23 @@ function displayTemperature(response) {
   );
   iconToday.setAttribute("alt", response.data.weather[0].description);
 }
-axios.get(apiUrl).then(displayTemperature);
+
+function search(city) {
+  let apiKey = "b39fd544fbfd289a17b0d205d5515953";
+  //let city = "Odessa";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  //console.log(apiUrl);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  //console.log(cityInputElement);
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+//search("Mexico");
