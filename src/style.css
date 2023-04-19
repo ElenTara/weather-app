@@ -34,7 +34,16 @@ p {
   position: relative;
   left: 15px;
 }
-#celcius,
+
+.units .active {
+  color: #59607a;
+  cursor: default;
+}
+.units .active:hover {
+  text-decoration: none;
+}
+
+#celsius,
 #fahrenheit {
   text-decoration: none;
 }
