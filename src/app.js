@@ -38,6 +38,47 @@ function formatDate(timestamp) {
   // Отображает время последнего обновления погоды на сайте!!
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay(); // дает номер эл-та в массиве от 0
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily; // новая переменная с данными из API (массив)
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHtml = `<div class="row weekly">`;
+  forecast.forEach(function (forecastDay, index) {
+    // цикл по переменной с прогнозом погоды
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `
+      <div class="col days">
+        <h5 class="day">${formatDay(forecastDay.dt)}</h5>
+        <img src=	"http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" alt="${forecastDay.weather[0].description}" width="60" />
+        <p class="next-temp">
+          <span class="temp-day">${Math.round(forecastDay.temp.max)}° 
+          </span>| ${Math.round(forecastDay.temp.min)}°
+        </p>
+        <p class="next-humid">15%</p>
+      </div>
+    `;
+    }
+  });
+  forecastHtml = forecastHtml + `</div>`; // и в конце закрывающий тег
+  forecastElement.innerHTML = forecastHtml;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "a33b693cfbefd271b0ed075f9a8f65f0";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
   //console.log(response.data);
   let currTemp = document.querySelector("#curr-temp");
@@ -71,6 +112,8 @@ function displayTemperature(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconToday.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -122,4 +165,8 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Odessa"); // покажет по умолчанию, при загрузке страницы
 
+// сделать конвертацию для Фаренгейтов !!?
+
 // + добавить функцию для кнопки Current !!!
+
+// + выровнять по верху температуру и иконку

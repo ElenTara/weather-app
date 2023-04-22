@@ -58,8 +58,8 @@
             </div>
           </form>
           <div class="today border-bottom">
-            <div class="row today-left">
-              <div class="col-8">
+            <div class="row">
+              <div class="col-8 today-left">
                 <h1 id="city"></h1>
                 <h6>
                   <span class="temp">Day 13 / Night 9 </span>
@@ -73,14 +73,16 @@
                   Sunday &nbsp;|&nbsp; March 19 &nbsp;|&nbsp; 20:09
                 </p>
               </div>
-              <div class="col-4 now">
-                <div class="row today-top">
-                  <div class="col-6" id="curr-temp"></div>
+              <div class="col-4 today-right">
+                <div class="row today-right-top">
+                  <div class="col-6">
+                    <span id="curr-temp"></span>
+                  </div>
                   <div class="col-6" id="today-icon">
                     <img src="" id="icon-now" alt="" />
                   </div>
                 </div>
-                <div class="row today-btm">
+                <div class="row today-right-btm">
                   <div class="col humid">
                     Humidity <span id="curr-hum"></span>%
                   </div>
@@ -91,48 +93,53 @@
               </div>
             </div>
           </div>
-          <div class="row forecast">
-            <div class="col days">
-              <h5 class="day">Tue</h5>
-              <i class="fa-solid fa-cloud-rain weather-icon"></i>
-              <p class="next-temp"><span class="temp-day">8° </span>| 3°</p>
-              <p class="next-humid">15%</p>
-            </div>
+          <div class="weather-forecast" id="forecast">
+            <!--
+            <div class="row weekly">
+              <div class="col days">
+                <h5 class="day">Tue</h5>
+                <i class="fa-solid fa-cloud-rain weather-icon"></i>
+                <p class="next-temp"><span class="temp-day">8° </span>| 3°</p>
+                <p class="next-humid">15%</p>
+              </div>
+            -->
+            <!--
+              <div class="col days">
+                <h5 class="day">Wed</h5>
+                <i class="fa-solid fa-cloud-rain weather-icon"></i>
+                <p class="next-temp"><span class="temp-day">10° </span>| 5°</p>
+                <p class="next-humid">14%</p>
+              </div>
 
-            <div class="col days">
-              <h5 class="day">Wed</h5>
-              <i class="fa-solid fa-cloud-rain weather-icon"></i>
-              <p class="next-temp"><span class="temp-day">10° </span>| 5°</p>
-              <p class="next-humid">14%</p>
-            </div>
+              <div class="col days">
+                <h5 class="day">Thu</h5>
+                <i class="fa-solid fa-cloud-sun weather-icon"></i>
+                <p class="next-temp"><span class="temp-day">11° </span>| 4°</p>
+                <p class="next-humid">15%</p>
+              </div>
 
-            <div class="col days">
-              <h5 class="day">Thu</h5>
-              <i class="fa-solid fa-cloud-sun weather-icon"></i>
-              <p class="next-temp"><span class="temp-day">11° </span>| 4°</p>
-              <p class="next-humid">15%</p>
-            </div>
+              <div class="col days">
+                <h5 class="day">Fri</h5>
+                <i class="fa-solid fa-cloud weather-icon"></i>
+                <p class="next-temp"><span class="temp-day">13° </span>| 6°</p>
+                <p class="next-humid">12%</p>
+              </div>
 
-            <div class="col days">
-              <h5 class="day">Fri</h5>
-              <i class="fa-solid fa-cloud weather-icon"></i>
-              <p class="next-temp"><span class="temp-day">13° </span>| 6°</p>
-              <p class="next-humid">12%</p>
-            </div>
+              <div class="col days">
+                <h5 class="day">Sat</h5>
+                <i class="fa-solid fa-cloud weather-icon"></i>
+                <p class="next-temp"><span class="temp-day">14° </span>| 6°</p>
+                <p class="next-humid">10%</p>
+              </div>
 
-            <div class="col days">
-              <h5 class="day">Sat</h5>
-              <i class="fa-solid fa-cloud weather-icon"></i>
-              <p class="next-temp"><span class="temp-day">14° </span>| 6°</p>
-              <p class="next-humid">10%</p>
+              <div class="col days">
+                <h5 class="day">Sun</h5>
+                <i class="fa-solid fa-cloud weather-icon"></i>
+                <p class="next-temp"><span class="temp-day">12° </span>| 7°</p>
+                <p class="next-humid">68%</p>
+              </div>
             </div>
-
-            <div class="col days">
-              <h5 class="day">Sun</h5>
-              <i class="fa-solid fa-cloud weather-icon"></i>
-              <p class="next-temp"><span class="temp-day">12° </span>| 7°</p>
-              <p class="next-humid">68%</p>
-            </div>
+            -->
           </div>
         </div>
         <p class="footer">
