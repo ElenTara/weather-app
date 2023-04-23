@@ -9,8 +9,9 @@ p {
 }
 
 img {
-  -webkit-filter: drop-shadow(3px 3px 3px rgb(156, 155, 155, 0.8));
-  filter: drop-shadow(3px 3px 3px rgb(156, 155, 155, 0.8));
+  /*-webkit-filter: drop-shadow(3px 3px 3px rgb(156, 155, 155, 0.8));*/
+  /*filter: drop-shadow(0 3px 3px rgba(116, 147, 160, 0.877));*/
+  filter: hue-rotate(337deg) drop-shadow(3px 3px 3px rgb(156, 155, 155, 0.8));
 }
 
 .weather {
@@ -32,12 +33,12 @@ img {
   padding: 0 10px 10px;
 }
 .temp {
-  font-size: 20px;
+  font-size: 1.1em;
 }
 .units {
   font-size: 20px;
   position: relative;
-  left: 15px;
+  left: 6px;
 }
 
 .units .active {

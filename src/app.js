@@ -141,35 +141,6 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#curr-temp"); // температура сейчас
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = celsiusTemperature * 1.8 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#curr-temp");
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  let temperature = Math.round(celsiusTemperature);
-  if (temperature > 0) {
-    temperature = `+${temperature}`; // можно добавить плюс
-  }
-  temperatureElement.innerHTML = temperature;
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
 search("Odessa"); // покажет по умолчанию, при загрузке страницы
 
 // сделать конвертацию для Фаренгейтов !!?
