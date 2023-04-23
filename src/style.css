@@ -23,12 +23,20 @@ img {
   background-image: url("https://images.pexels.com/photos/19670/pexels-photo.jpg");
   background-size: cover;
 }
+
+/*
 .buttons {
   padding-left: 0px;
 }
+
 .btn {
   padding: 8px;
 }
+*/
+.city-search {
+  padding-right: 0;
+}
+
 .today {
   padding: 0 10px 10px;
 }
@@ -60,13 +68,22 @@ img {
   text-align: center;
 }
 .today-right-top {
+  /* 
+  display: flex;
+  align-items: start;
+  */
   font-family: "Montserrat", sans-serif;
   font-size: 45px;
   font-weight: 900;
 }
+#curr-temp {
+  position: relative;
+  top: 8px;
+}
 #icon-now {
   width: 80px;
   height: 80px;
+  /*vertical-align: top;*/
 }
 .weekly {
   margin: 0;
