@@ -47,11 +47,18 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily; // новая переменная с данными из API (массив)
+  //console.log(response.data.daily);
+
+  let TodayTempLeft = document.querySelector("#today-temp");
+  TodayTempLeft.innerHTML = `<span class="temp" id="today-temp">Day ${Math.round(
+    forecast[0].temp.max
+  )} / Night ${Math.round(forecast[0].temp.min)} </span>`;
+
   let forecastElement = document.querySelector("#forecast");
   let forecastHtml = `<div class="row weekly">`;
   forecast.forEach(function (forecastDay, index) {
     // цикл по переменной с прогнозом погоды
-    if (index < 6) {
+    if (index > 0 && index < 7) {
       forecastHtml =
         forecastHtml +
         `
@@ -64,7 +71,7 @@ function displayForecast(response) {
           <span class="temp-day">${Math.round(forecastDay.temp.max)}° 
           </span>| ${Math.round(forecastDay.temp.min)}°
         </p>
-        <p class="next-humid">15%</p>
+        <p class="next-humid">${forecastDay.humidity}%</p>
       </div>
     `;
     }
